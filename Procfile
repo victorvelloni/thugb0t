@@ -1,0 +1,1 @@
+worker: python3 tuites.py
