@@ -8,10 +8,9 @@ def autenticar():
     access_token_secret = "glNOmPtvwjAxNUu7gIY7YP3HbT5h4qrMBtBLeFRdhCow5"
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-
     auth.set_access_token(access_token, access_token_secret)
 
-    return tweepy.API(auth)
+    return tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 if __name__ == "__main__":
     autenticar()
